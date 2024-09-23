@@ -14,7 +14,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Heroslider({images}) {
   return (
-    <div className='w-full lg:h-[50vh]'>
+    <div className='w-full h-[40vh] lg:h-[50vh]'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -30,11 +30,11 @@ export default function Heroslider({images}) {
         modules={[Autoplay, Pagination,]}
         className="mySwiper"
       >
-        {images.map((items,key)=>{
+        {images.map((items,index)=>{
           return(
-            <div className=''>
-              <SwiperSlide><img className='' src={items.image} alt="" /></SwiperSlide>
-            </div>
+            
+              <SwiperSlide key={index}><img className='' src={items.image} alt="" /></SwiperSlide>
+            
           )
         })}
       </Swiper>

@@ -1,5 +1,9 @@
 import React from 'react';
 import Heroslider from '../Components/Heroslider';
+import Landingsmallcategory from '../Components/Landingsmallcategory';
+import Taglinesection from '../Components/Taglinesection';
+import Newlaunches from '../Components/Newlaunches';
+import Marquee from '../Components/Marquee';
 
 const Home = () => {
   const images = [
@@ -14,9 +18,39 @@ const Home = () => {
     },
   ];
 
+
+
+
+  // marquee
+  let marquee = [
+    {
+      img:'./src/assets/img/flow.png'
+    },
+    {
+      img:'./src/assets/img/JUNE.png'
+    },
+    {
+      img:'./src/assets/img/MAX.png'
+    },
+    {
+      img:'./src/assets/img/NINO.png'
+    },
+    {
+      img:'./src/assets/img/ZINE.png'
+    },
+    {
+      img:'./src/assets/img/InTrend.png'
+    },
+  ]
+
   return (
     <div>
       <Heroslider images={images} />
+      <Landingsmallcategory/>
+      <Taglinesection/>
+      <Newlaunches/>
+      <Marquee img={marquee}/>
+
     </div>
   );
 };

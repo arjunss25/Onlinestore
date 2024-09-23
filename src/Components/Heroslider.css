@@ -1,29 +1,29 @@
 .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  /* Default pagination bullet */
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 88%;
+  object-fit: cover;
+}
+/* Default pagination bullet */
 .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background-color: #999;
   opacity: 1;
   transition: width 0.3s, height 0.3s;
@@ -32,7 +32,7 @@
 /* Active pagination bullet */
 .swiper-pagination-bullet-active {
   width: 40px;
-  height: 10px;
+  height: 7px;
   background-color: #ff0000;
   border-radius: 20px;
 }
