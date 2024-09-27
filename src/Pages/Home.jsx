@@ -4,6 +4,10 @@ import Landingsmallcategory from '../Components/Landingsmallcategory';
 import Taglinesection from '../Components/Taglinesection';
 import Newlaunches from '../Components/Newlaunches';
 import Marquee from '../Components/Marquee';
+import Bestseller from '../Components/Bestseller';
+import Toppicks from '../Components/Toppicks';
+import Justtrending from '../Components/Justtrending';
+import Shopbycategory from '../Components/Shopbycategory';
 
 const Home = () => {
   const images = [
@@ -41,6 +45,28 @@ const Home = () => {
     {
       img:'./src/assets/img/InTrend.png'
     },
+    
+  ]
+
+
+
+  // best-seller
+  let bestseller = [
+    {
+      img:"./src/assets/img/besrseller (1).png",
+      title:'Mexico'
+    },{
+      img:"./src/assets/img/besrseller (2).png",
+      title:'Ensens'
+    },
+    {
+      img:"./src/assets/img/besrseller (3).png",
+      title:'Chanel'
+    },
+    {
+      img:"./src/assets/img/besrseller (4).png",
+      title:'Origin'
+    },
   ]
 
   return (
@@ -50,6 +76,10 @@ const Home = () => {
       <Taglinesection/>
       <Newlaunches/>
       <Marquee img={marquee}/>
+      <Bestseller data={bestseller}/>
+      <Toppicks/>
+      <Justtrending/>
+      <Shopbycategory/>
 
     </div>
   );
