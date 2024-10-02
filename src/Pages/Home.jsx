@@ -8,6 +8,9 @@ import Bestseller from '../Components/Bestseller';
 import Toppicks from '../Components/Toppicks';
 import Justtrending from '../Components/Justtrending';
 import Shopbycategory from '../Components/Shopbycategory';
+import Bestdeal from '../Components/Bestdeal';
+import Testimonialmain from '../Components/Testimonialmain';
+import Footer from '../Components/Footer';
 
 const Home = () => {
   const images = [
@@ -80,6 +83,9 @@ const Home = () => {
       <Toppicks/>
       <Justtrending/>
       <Shopbycategory/>
+      <Bestdeal/>
+      <Testimonialmain/>
+      <Footer/>
 
     </div>
   );
