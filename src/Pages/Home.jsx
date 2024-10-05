@@ -84,7 +84,7 @@ const Home = () => {
       <Justtrending/>
       <Shopbycategory/>
       <Bestdeal/>
-      <Testimonialmain/>
+      {/* <Testimonialmain/> */}
       <Footer/>
 
     </div>
