@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import { GoSearch } from 'react-icons/go';
 import { HiOutlineShoppingCart } from 'react-icons/hi2';
 import { FaRegHeart } from 'react-icons/fa';
+import Searchbar from './Searchbar';
 
 const MainNavbar = () => {
-  return (
-    <div className="w-full h-[10vh] px-2 lg:px-10 flex items-center justify-between">
+  return ( 
+    <div className="w-full h-[10vh] px-2 lg:px-10 flex items-center justify-between relative">
+      <Searchbar/>
       <div className="logo">
         <Link className="text-[1.5rem] font-bold">SHOP.CO</Link>
       </div>
