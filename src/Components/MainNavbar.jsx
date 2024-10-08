@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MainNavbar.css';
 import { Link } from 'react-router-dom';
 import { GoSearch } from 'react-icons/go';
@@ -7,16 +7,29 @@ import { FaRegHeart } from 'react-icons/fa';
 import Searchbar from './Searchbar';
 
 const MainNavbar = () => {
+
+
+  
+  const [visible, setvisible] = useState(false)
+  const seacrchToggle = () =>{
+    setvisible(true)
+    
+  }
+  console.log(visible)
+
+
+
+
   return ( 
     <div className="w-full h-[10vh] px-2 lg:px-10 flex items-center justify-between relative">
-      <Searchbar/>
+      <Searchbar status = {visible} />
       <div className="logo">
         <Link className="text-[1.5rem] font-bold">SHOP.CO</Link>
       </div>
 
       <div className="utilities flex items-center justify-center gap-3">
         <Link className="text-[1.5rem]">
-          <GoSearch />
+          <GoSearch onClick={seacrchToggle} />
         </Link>
         <Link className="text-[1.2rem] lg:text-[1.5rem]">
           <FaRegHeart />

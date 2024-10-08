@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { GoSearch } from 'react-icons/go';
 import { IoCloseOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
-const Searchbar = () => {
+const Searchbar = ({status}) => {
+
+  const [visible, setvisible] = useState(true)
+
+  const closeToggle =() =>{
+    setvisible(false);
+  }
+  console.log(visible);
+  
+
+
   return (
-    <div className='absolute w-full h-[50vh] bg-white top-0 left-0 z-[50]'>
+    <div className={`absolute w-full h-[50vh] bg-white top-0 left-0 z-[50] ${status == true ? "visible" : "hidden"}   ${visible  ? "visible" : "hidden"}`}>
         <div className="top-sec w-full flex items-center justify-center gap-3 lg:gap-10 h-[15vh]">
-            <GoSearch className='text-[1.5rem] cursor-pointer'/>
+            <GoSearch  className='text-[1.5rem] cursor-pointer'/>
             <input type="text" className='w-[70vw] sm:w-[80vw] h-[6vh] rounded-[2rem] bg-zinc-200 px-5 ' />
-            <IoCloseOutline  className='text-[2rem] cursor-pointer'/>
+            <IoCloseOutline onClick={closeToggle}  className='text-[2rem] cursor-pointer'/>
             
         </div>
 
